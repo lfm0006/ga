@@ -1,6 +1,6 @@
 # Project GENALG
 Project GENALG - Classes and examples in Java for Genetic Algorithms
-This project contains an experimental Java classes set for implementing Genetic Algorithms examples, classical approach and permutation. I’ve been used in my AI classes over the last two years. Central idea was to stress the GA using many variables and nodes in the examples, checking out the results from many runs and evaluating the trade-off between time and generations. Further benchmarking with other implementations are foreseen.
+This project contains an experimental Java classes set for implementing Genetic Algorithms examples, classical approach and permutation. I’ve been used it in my AI classes over the last two years. Central idea was to stress the GA using many variables and nodes in the examples, checking out the results from many runs and evaluating the trade-off between time and generations. Further benchmarking with other implementations are foreseen.
 
 Core code is divided as follows:
 - GenAlg.java: class for traditional GA, according Goldberg’s book.
