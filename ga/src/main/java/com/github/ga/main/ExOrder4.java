@@ -22,7 +22,6 @@ public class ExOrder4 {
 		// TODO Auto-generated method stub
 		utility = new Utility();
 
-		// Exemplo de n�s
 		double[] x = new double[]{12, 15, 20, 25, 25, 23, 20, 18, 15, 13, 10,  8,  8,  9, 11}; 
 		double[] y = new double[]{10, 10, 12, 15, 20, 25, 27, 27, 25, 22, 18, 15, 12, 10, 10}; 
 

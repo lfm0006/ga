@@ -29,7 +29,6 @@ public class ExOrder8 {
 
 		s = new Graph(TAMANHO, 10, 15, x, y, precision);
 
-		// Exemplo de n�s
 		//utility.printHeader(ps);
 		for(int i=39; i<TAMANHO; i++) {
 			PrintStream ps = new PrintStream(new FileOutputStream("./examples/exorder8/ExOrder8_"+String.valueOf(i)+".txt", true));

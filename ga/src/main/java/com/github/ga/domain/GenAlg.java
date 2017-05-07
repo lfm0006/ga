@@ -7,18 +7,18 @@ import com.github.ga.util.Utility;
 
 public class GenAlg {
 
-	// constantes
+	// constants
 	static int MAXPOP = 1000;
 	static int MAXSTRING = 300;
 	static int MAXNVAR = 20;
 
-	public int popSize; // tamanho da população
-	public int lChrom; // tamanho do cromossomo
-	public int maxGen; // nï¿½mero mï¿½ximo de geraï¿½ï¿½es
-	public double pMutation; // taxa de mutaï¿½ï¿½o
-	public double pCrossover; // taxa de crossover
-	public double pSelection; // taxa de seleï¿½ï¿½o
-	public double precision; // precisï¿½o para fitness
+	public int popSize; // size of population
+	public int lChrom; // length of chrmomossome
+	public int maxGen; // maximum number of generations
+	public double pMutation; // mutation rate
+	public double pCrossover; // crossover rate
+	public double pSelection; // selection rate
+	public double precision; // fitness precision
 
 	public int fGen;
     private Population oldPop, newPop;   // Two non-overlapping populations 
@@ -322,7 +322,7 @@ public class GenAlg {
 	private void Decode(Chromossome chrom, double[] x) {
 	    double accum, powerOf2;
 
-	    // Deve acumular no vetor X a decodificacao binaria das variaveis
+	    // Must add in vector X the binary decodification of variables
 	    for(int i=0; i < nVar; i++) {
 	    	accum = 0;
 	    	powerOf2 = 1;

@@ -19,7 +19,6 @@ public class ExOrder3 {
 	public static void main(String[] args) throws FileNotFoundException {
 		utility = new Utility();
 
-		// Exemplo de n�s
 		double[] x = new double[]{21, 23, 24, 23, 21, 19, 18, 19}; 
 		double[] y = new double[]{11, 12, 15, 18, 19, 18, 15, 12}; 
 

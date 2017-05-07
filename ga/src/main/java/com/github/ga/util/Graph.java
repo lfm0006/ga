@@ -1,7 +1,5 @@
 package com.github.ga.util;
 
-import java.io.FileNotFoundException;
-
 public class Graph {
 	
 	public double r;

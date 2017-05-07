@@ -33,20 +33,20 @@ public class GenAlgOrder {
 	private int typeCrossover;
 	private int typeMutation; 
 	
-	// Posi��o (x,y) de cada n�
+	// (x,y) position of each node
 	private double[] x;
 	private double[] y;
 
-	// Estat�stica
+	// statistics
     private double sumFitness;
     double savg, smax, smin; // Real statistics 
-    public double maxFitness, minFitness; // Fitness M�nimo e M�ximo
+    public double maxFitness, minFitness; // maximum and minimum fitness
     
     private boolean canExit = false;
 
     static Utility utility;
     
-	// Construtor da classe com o tamanho
+	// Construtor 
 	public GenAlgOrder(double[] x, 
 					   double[] y, 
 					   int len, 
@@ -81,7 +81,7 @@ public class GenAlgOrder {
 			this.typeMutation = utility.MUTATION_INVERSION_NODE;
 		}
 
-		// Cria a antiga e a nova popula��o
+		// Creates old and new population
 		Chromossome[] oldChrom = new Chromossome[popSize]; 
 		Chromossome[] newChrom = new Chromossome[popSize]; 
 		for(int i=0; i<popSize; i++) {
@@ -91,7 +91,7 @@ public class GenAlgOrder {
 		oldPop = new Population(oldChrom);
 		newPop = new Population(newChrom);
 
-		// Cria indiv�duo para o m�nimo fitness
+		// Creates and individual for maximum and minimum fitness
 		indFitMin = new Chromossome(len);
 		indFitMax = new Chromossome(len);
 		indGlobalFitMax = new Chromossome(len);
@@ -374,16 +374,16 @@ public class GenAlgOrder {
 	}
 	
 	public class Chromossome {
-		// Vari�vel interna para cada cromossomo
+		// Internal array for each chromossome
 		private int[] nodes;
 		
-		// Fun��o dist�ncia total dos n�s do cromossomo (fitness)
+		// Fitness
 		private double fitness;
 		
-		// Fun��o dist�ncia normalizada (invers�o para maximiza��o)
+		// Normalized fitness
 		private double fitnessNorm;
 		
-		// Pais que originaram
+		// Direct parents 
 		private int parent1 = 0, parent2 = 0;
 		
 		public Chromossome(int num) {
@@ -503,10 +503,10 @@ public class GenAlgOrder {
 			
 			k = 0;
 			while(visited.size()<tam && node_actual>0) {
-				// corrente vai para posi��o correta e lista de usadas
+				// current node go to correct and list of nodes used
 				result.nodes[k++] = node_actual;
 				visited.add(new Integer(node_actual));
-				// remove a cidade corrente da lista de adjac�ncias
+				// removes the current node from adjacents list
 				for(i=0; i<tam; i++) {
 					j = 0;
 					while(j>=0) {
@@ -517,7 +517,7 @@ public class GenAlgOrder {
 					}
 				}
 			
-				// escolhe a pr�xima cidade
+				// Choose the next node 
 				if(v[node_actual-1].size()>0) {
 					next_node = ((Integer) v[node_actual-1].get(0)).intValue();
 					tam_prox = v[next_node-1].size();
@@ -529,7 +529,7 @@ public class GenAlgOrder {
 						}
 					}
 				} else {
-					// N�o h� cidades na lista de adjac�ncias
+					// There's no nodes in the adjacents list
 					next_node = -1;
 					for(i=1; (next_node<0) && (i<tam); i++) {
 						if(visited.indexOf(new Integer(i))<0) {
@@ -575,7 +575,7 @@ public class GenAlgOrder {
 			return(result);
 		}
 		
-		// M�todos para muta��o
+		// Mutation
 		public void mutationMixingSubList() {
 			int i, j, start, end;
 			start = (int) Math.round(Math.random()*nodes.length);
